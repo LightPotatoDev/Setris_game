@@ -1,0 +1,20 @@
+[gd_scene format=2]
+
+[node name="NextShapePanel" type="Node2D"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 40.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 20 )
+text = "Next:"
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = 24.0
+
+[node name="Sprite" type="Sprite" parent="VBoxContainer/Control"]

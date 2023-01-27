@@ -1,0 +1,533 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://GeosansLight.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sprites/Gimmicks/Block.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Gradient.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Gimmicks/Logo.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/BG/BGCastle.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/TitleStart.gd" type="Script" id=6]
+[ext_resource path="res://Sprites/LongKey.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/Buttons/SceneChangeButton.gd" type="Script" id=8]
+[ext_resource path="res://Sprites/BG/BGCircle.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/BG/BGXMark.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/PlaySfx.gd" type="Script" id=11]
+[ext_resource path="res://Sounds/Click.wav" type="AudioStream" id=12]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 120
+outline_size = 1
+outline_color = Color( 1, 1, 1, 0.0823529 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 120
+outline_size = 1
+outline_color = Color( 1, 1, 1, 0.341176 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 32
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texts/Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Texts/Title:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Texts/Title/Lv2:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 480, 170 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Texts/Title/Lv3:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 480, 170 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BG/Castle:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1600, 700 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("BG/Castle2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -288, 672 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("BG/Gradient:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2.47827, 0.339641 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("BG/Gradient:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 608, 768 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("BG/Logo:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 608, -224 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("BG/Logo:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -120.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Texts/Maker:rect_position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 496, 800 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Buttons:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Buttons:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 200 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Start"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texts/Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 0, 0, 0, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Texts/Title:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.6, 1.5 ),
+"transitions": PoolRealArray( 0.25, 0.25, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -100 ), Vector2( 0, -100 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Texts/Title/Lv2:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.6, 1.5 ),
+"transitions": PoolRealArray( -2, 0.25, 1 ),
+"update": 0,
+"values": [ Vector2( 480, 170 ), Vector2( 480, 170 ), Vector2( 480, 192 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Texts/Title/Lv3:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.6, 1.5 ),
+"transitions": PoolRealArray( -2, 0.25, 1 ),
+"update": 0,
+"values": [ Vector2( 480, 170 ), Vector2( 480, 170 ), Vector2( 480, 224 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BG/Castle:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( -2, 1 ),
+"update": 0,
+"values": [ Vector2( 1600, 700 ), Vector2( 1017.5, 400 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("BG/Castle2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( -2, 1 ),
+"update": 0,
+"values": [ Vector2( -288, 672 ), Vector2( 96, 288 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("BG/Gradient:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 0.25, 1 ),
+"update": 0,
+"values": [ Vector2( 608, 768 ), Vector2( 608, 768 ), Vector2( 613.073, 582.892 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("BG/Gradient:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 0.25, 1 ),
+"update": 0,
+"values": [ Vector2( 2.47827, 0.339641 ), Vector2( 2.47827, 0.339641 ), Vector2( 2.47827, 2.41775 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("BG/Logo:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.7, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 0.5, -2, 1 ),
+"update": 0,
+"values": [ Vector2( 608, -224 ), Vector2( 608, -224 ), Vector2( 608, 320 ), Vector2( 608, 240 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("BG/Logo:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.7, 2 ),
+"transitions": PoolRealArray( 1, -2, 1 ),
+"update": 0,
+"values": [ -120.0, -120.0, -30.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Texts/Maker:rect_position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.7, 1.5 ),
+"transitions": PoolRealArray( 1, -2, 1 ),
+"update": 0,
+"values": [ Vector2( 496, 800 ), Vector2( 496, 800 ), Vector2( 496, 670 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Buttons:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.6, 1.5 ),
+"transitions": PoolRealArray( 1, 0.5, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 200 ), Vector2( 0, 200 ), Vector2( 0, 0 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Buttons:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 0, 0, 0, 0 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Title" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+zoom = Vector2( 1.2, 1.2 )
+
+[node name="BG" type="Node2D" parent="."]
+
+[node name="Gradient" type="Sprite" parent="BG"]
+modulate = Color( 1, 1, 1, 0.305882 )
+position = Vector2( 608, 768 )
+rotation = -3.14159
+scale = Vector2( 2.47827, 0.339641 )
+z_index = -20
+texture = ExtResource( 3 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="BG"]
+position = Vector2( 598, 779 )
+z_index = -10
+amount = 12
+lifetime = 3.0
+texture = ExtResource( 2 )
+emission_shape = 2
+emission_rect_extents = Vector2( 600, 1 )
+direction = Vector2( 0, -100 )
+gravity = Vector2( 0, 0 )
+initial_velocity = 90.0
+initial_velocity_random = 0.2
+angular_velocity = 150.0
+angular_velocity_random = 0.5
+color = Color( 0.423529, 0.423529, 0.423529, 0.219608 )
+color_ramp = SubResource( 1 )
+
+[node name="Castle" type="Sprite" parent="BG"]
+modulate = Color( 0.133333, 0.133333, 0.14902, 1 )
+position = Vector2( 1600, 700 )
+scale = Vector2( 1.12439, 1.12 )
+z_index = -21
+texture = ExtResource( 5 )
+
+[node name="Castle2" type="Sprite" parent="BG"]
+modulate = Color( 0.133333, 0.133333, 0.14902, 1 )
+position = Vector2( -288, 672 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -21
+texture = ExtResource( 5 )
+
+[node name="Logo" type="Sprite" parent="BG"]
+modulate = Color( 1, 1, 1, 0.0980392 )
+self_modulate = Color( 0.545098, 0.545098, 0.545098, 1 )
+position = Vector2( 608, -224 )
+rotation = -2.0944
+scale = Vector2( 2, 2 )
+z_index = -4
+texture = ExtResource( 4 )
+
+[node name="BGCircle" type="CPUParticles2D" parent="BG"]
+position = Vector2( -159, 280 )
+z_index = -22
+amount = 6
+lifetime = 40.0
+texture = ExtResource( 9 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1, 300 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 80.0
+initial_velocity_random = 0.5
+color = Color( 0.0823529, 0.0823529, 0.0823529, 0.219608 )
+
+[node name="BGXMark" type="CPUParticles2D" parent="BG"]
+position = Vector2( -157, 285 )
+z_index = -22
+amount = 6
+lifetime = 40.0
+texture = ExtResource( 10 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1, 300 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 80.0
+initial_velocity_random = 0.5
+color = Color( 0.0823529, 0.0823529, 0.0823529, 0.219608 )
+
+[node name="Texts" type="Node2D" parent="."]
+
+[node name="Title" type="Node2D" parent="Texts"]
+modulate = Color( 1, 1, 1, 0 )
+
+[node name="Lv" type="Label" parent="Texts/Title"]
+margin_left = 448.0
+margin_top = 168.0
+margin_right = 783.0
+margin_bottom = 301.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Setris"
+align = 1
+
+[node name="Lv2" type="Label" parent="Texts/Title"]
+margin_left = 480.0
+margin_top = 170.0
+margin_right = 753.0
+margin_bottom = 303.0
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_fonts/font = SubResource( 3 )
+text = "Setris"
+align = 1
+
+[node name="Lv3" type="Label" parent="Texts/Title"]
+margin_left = 480.0
+margin_top = 170.0
+margin_right = 753.0
+margin_bottom = 303.001
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_fonts/font = SubResource( 2 )
+text = "Setris"
+align = 1
+
+[node name="Maker" type="Label" parent="Texts"]
+margin_left = 496.0
+margin_top = 800.0
+margin_right = 729.0
+margin_bottom = 836.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_constants/shadow_offset_x = 0
+custom_fonts/font = SubResource( 4 )
+text = "LightPotato 2023"
+align = 1
+valign = 1
+
+[node name="Buttons" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 0, 200 )
+
+[node name="Play" type="Button" parent="Buttons"]
+margin_left = 504.0
+margin_top = 402.0
+margin_right = 724.0
+margin_bottom = 472.0
+custom_fonts/font = SubResource( 7 )
+text = "Play"
+icon = ExtResource( 7 )
+flat = true
+icon_align = 1
+script = ExtResource( 8 )
+sceneName = "LevelSelect"
+
+[node name="Credits" type="Button" parent="Buttons"]
+margin_left = 504.0
+margin_top = 490.0
+margin_right = 724.0
+margin_bottom = 560.0
+custom_fonts/font = SubResource( 7 )
+text = "Credits"
+icon = ExtResource( 7 )
+flat = true
+icon_align = 1
+script = ExtResource( 8 )
+sceneName = "Credits"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 6 )
+anims/Start = SubResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -7.0
+script = ExtResource( 11 )
+funcName = "on_mouse_entered"

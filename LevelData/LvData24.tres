@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+lvTitle = "Staircase in the Future"
+pieceOrder = [ 0, 5, 2, 1, 1 ]
+requirementCheck = [ Vector2( 1, 17 ), Vector2( 8, 17 ), Vector2( 3, 16 ), Vector2( 4, 16 ), Vector2( 5, 16 ), Vector2( 6, 16 ), Vector2( 7, 16 ), Vector2( 3, 15 ), Vector2( 4, 15 ), Vector2( 5, 15 ), Vector2( 6, 15 ), Vector2( 3, 14 ), Vector2( 4, 14 ), Vector2( 5, 14 ) ]
+initialBlocks = [ Vector2( 0, 16 ), Vector2( 1, 17 ), Vector2( 8, 17 ), Vector2( 9, 16 ) ]

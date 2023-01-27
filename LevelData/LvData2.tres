@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+lvTitle = "Rotating Stuff"
+pieceOrder = [ 6, 2 ]
+requirementCheck = [ Vector2( 3, 19 ), Vector2( 4, 19 ), Vector2( 5, 19 ), Vector2( 2, 18 ), Vector2( 3, 18 ), Vector2( 4, 18 ), Vector2( 5, 18 ), Vector2( 6, 18 ) ]
+initialBlocks = [  ]

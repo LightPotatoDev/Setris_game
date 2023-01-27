@@ -1,0 +1,394 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scenes/BG.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GeosansLight.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Sprites/Gimmicks/Block.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/PlaySfx.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Buttons/LevelButton.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Buttons/SceneChangeButton.gd" type="Script" id=6]
+[ext_resource path="res://Sprites/LongKey.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/CompleteLvCount.gd" type="Script" id=8]
+[ext_resource path="res://Sounds/Click.wav" type="AudioStream" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 54
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+outline_size = 1
+outline_color = Color( 0.564706, 0.662745, 1, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="LevelSelect" type="Node2D"]
+
+[node name="Lv" type="Label" parent="."]
+margin_left = 449.0
+margin_top = 53.0
+margin_right = 784.0
+margin_bottom = 113.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Level Select"
+align = 1
+
+[node name="Completion" type="Label" parent="."]
+margin_left = 468.0
+margin_top = 561.0
+margin_right = 762.0
+margin_bottom = 597.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_constants/shadow_offset_x = 0
+custom_fonts/font = SubResource( 2 )
+text = "? / 25 Levels Completed"
+align = 1
+valign = 1
+script = ExtResource( 8 )
+
+[node name="Congrats" type="Label" parent="Completion"]
+margin_left = -37.0
+margin_top = 60.0
+margin_right = 329.0
+margin_bottom = 116.0
+custom_colors/font_color = Color( 0.564706, 0.662745, 1, 1 )
+custom_constants/shadow_offset_x = 0
+custom_fonts/font = SubResource( 4 )
+text = "Congratulations! :D"
+align = 1
+valign = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+zoom = Vector2( 1.2, 1.2 )
+
+[node name="FirstContainer" type="GridContainer" parent="."]
+margin_left = 220.0
+margin_top = 187.0
+margin_right = 1016.0
+margin_bottom = 276.0
+columns = 10
+
+[node name="LvButton1" type="Button" parent="FirstContainer"]
+margin_right = 76.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "1"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton2" type="Button" parent="FirstContainer"]
+margin_left = 80.0
+margin_right = 156.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "2"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton3" type="Button" parent="FirstContainer"]
+margin_left = 160.0
+margin_right = 236.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "3"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton4" type="Button" parent="FirstContainer"]
+margin_left = 240.0
+margin_right = 316.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "4"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton5" type="Button" parent="FirstContainer"]
+margin_left = 320.0
+margin_right = 396.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "5"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton6" type="Button" parent="FirstContainer"]
+margin_left = 400.0
+margin_right = 476.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "6"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton7" type="Button" parent="FirstContainer"]
+margin_left = 480.0
+margin_right = 556.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "7"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton8" type="Button" parent="FirstContainer"]
+margin_left = 560.0
+margin_right = 636.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "8"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton9" type="Button" parent="FirstContainer"]
+margin_left = 640.0
+margin_right = 716.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "9"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton10" type="Button" parent="FirstContainer"]
+margin_left = 720.0
+margin_right = 796.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "10"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="SecondContainer" type="GridContainer" parent="."]
+margin_left = 338.0
+margin_top = 299.0
+margin_right = 894.0
+margin_bottom = 369.0
+columns = 10
+
+[node name="LvButton11" type="Button" parent="SecondContainer"]
+margin_right = 76.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "11"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton12" type="Button" parent="SecondContainer"]
+margin_left = 80.0
+margin_right = 156.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "12"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton13" type="Button" parent="SecondContainer"]
+margin_left = 160.0
+margin_right = 236.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "13"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton14" type="Button" parent="SecondContainer"]
+margin_left = 240.0
+margin_right = 316.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "14"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton15" type="Button" parent="SecondContainer"]
+margin_left = 320.0
+margin_right = 396.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "15"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton16" type="Button" parent="SecondContainer"]
+margin_left = 400.0
+margin_right = 476.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "16"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton17" type="Button" parent="SecondContainer"]
+margin_left = 480.0
+margin_right = 556.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "17"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="ThirdContainer" type="GridContainer" parent="."]
+margin_left = 300.0
+margin_top = 409.0
+margin_right = 936.0
+margin_bottom = 479.0
+columns = 10
+
+[node name="LvButton18" type="Button" parent="ThirdContainer"]
+margin_right = 76.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "18"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton19" type="Button" parent="ThirdContainer"]
+margin_left = 80.0
+margin_right = 156.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "19"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton20" type="Button" parent="ThirdContainer"]
+margin_left = 160.0
+margin_right = 236.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "20"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton21" type="Button" parent="ThirdContainer"]
+margin_left = 240.0
+margin_right = 316.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "21"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton22" type="Button" parent="ThirdContainer"]
+margin_left = 320.0
+margin_right = 396.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "22"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton23" type="Button" parent="ThirdContainer"]
+margin_left = 400.0
+margin_right = 476.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "23"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton24" type="Button" parent="ThirdContainer"]
+margin_left = 480.0
+margin_right = 556.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "24"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="LvButton25" type="Button" parent="ThirdContainer"]
+margin_left = 560.0
+margin_right = 636.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 5 )
+text = "25"
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+script = ExtResource( 5 )
+
+[node name="Credits" type="Button" parent="."]
+margin_left = 47.0
+margin_top = 44.0
+margin_right = 267.0
+margin_bottom = 114.0
+custom_fonts/font = SubResource( 6 )
+text = "Back"
+icon = ExtResource( 7 )
+flat = true
+icon_align = 1
+script = ExtResource( 6 )
+sceneName = "Title"
+
+[node name="BG" parent="." instance=ExtResource( 1 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -7.0
+script = ExtResource( 4 )
+funcName = "on_mouse_entered"

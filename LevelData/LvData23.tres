@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+lvTitle = "floaT"
+pieceOrder = [ 0, 2, 0, 2, 2, 2 ]
+requirementCheck = [ Vector2( 0, 18 ), Vector2( 0, 17 ), Vector2( 1, 17 ), Vector2( 0, 16 ) ]
+initialBlocks = [ Vector2( 0, 18 ), Vector2( 4, 17 ), Vector2( 5, 17 ), Vector2( 6, 17 ), Vector2( 7, 17 ), Vector2( 8, 17 ), Vector2( 9, 17 ), Vector2( 7, 16 ), Vector2( 8, 16 ), Vector2( 9, 16 ) ]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+lvTitle = "Key Assemble"
+pieceOrder = [ 1, 3, 1, 2 ]
+requirementCheck = [ Vector2( 3, 19 ), Vector2( 5, 19 ), Vector2( 7, 19 ), Vector2( 8, 19 ), Vector2( 9, 19 ), Vector2( 1, 18 ), Vector2( 2, 18 ), Vector2( 3, 18 ), Vector2( 4, 18 ), Vector2( 5, 18 ), Vector2( 6, 18 ), Vector2( 7, 18 ), Vector2( 9, 18 ), Vector2( 7, 17 ), Vector2( 8, 17 ), Vector2( 9, 17 ) ]
+initialBlocks = [  ]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+lvTitle = "Floaty Foundation"
+pieceOrder = [ 2, 4, 0, 2, 5 ]
+requirementCheck = [ Vector2( 4, 18 ), Vector2( 5, 18 ), Vector2( 1, 17 ), Vector2( 2, 17 ), Vector2( 3, 17 ), Vector2( 4, 17 ), Vector2( 5, 17 ), Vector2( 6, 17 ), Vector2( 7, 17 ), Vector2( 8, 17 ), Vector2( 1, 16 ), Vector2( 2, 16 ), Vector2( 3, 16 ), Vector2( 4, 16 ), Vector2( 5, 16 ), Vector2( 6, 16 ), Vector2( 7, 16 ), Vector2( 8, 16 ), Vector2( 2, 15 ), Vector2( 4, 15 ), Vector2( 5, 15 ), Vector2( 7, 15 ) ]
+initialBlocks = [ Vector2( 4, 18 ), Vector2( 5, 18 ) ]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+lvTitle = "Layers"
+pieceOrder = [ 0, 0, 0, 4, 0, 0, 4, 0 ]
+requirementCheck = [ Vector2( 4, 9 ), Vector2( 5, 9 ), Vector2( 4, 14 ), Vector2( 5, 14 ), Vector2( 0, 14 ), Vector2( 9, 14 ), Vector2( 4, 19 ), Vector2( 5, 19 ) ]
+initialBlocks = [ Vector2( 4, 6 ), Vector2( 5, 6 ), Vector2( 0, 13 ), Vector2( 4, 13 ), Vector2( 5, 13 ), Vector2( 9, 13 ) ]

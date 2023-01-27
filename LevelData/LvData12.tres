@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+lvTitle = "Faraway"
+pieceOrder = [ 4, 0, 4, 0 ]
+requirementCheck = [ Vector2( 0, 19 ), Vector2( 1, 19 ), Vector2( 8, 19 ), Vector2( 9, 19 ), Vector2( 8, 18 ), Vector2( 9, 18 ) ]
+initialBlocks = [  ]

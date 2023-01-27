@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+lvTitle = "Squared Foundation"
+pieceOrder = [ 4, 4, 0, 2, 0, 6 ]
+requirementCheck = [ Vector2( 1, 19 ), Vector2( 2, 19 ), Vector2( 7, 19 ), Vector2( 8, 19 ), Vector2( 1, 18 ), Vector2( 2, 18 ), Vector2( 7, 18 ), Vector2( 8, 18 ), Vector2( 3, 16 ), Vector2( 5, 16 ), Vector2( 3, 17 ), Vector2( 4, 17 ), Vector2( 5, 17 ), Vector2( 6, 17 ) ]
+initialBlocks = [  ]

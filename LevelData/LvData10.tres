@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://LevelData/LevelData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+lvTitle = "Glorious Crown"
+pieceOrder = [ 2, 6, 1, 0, 2 ]
+requirementCheck = [ Vector2( 0, 19 ), Vector2( 1, 19 ), Vector2( 2, 19 ), Vector2( 3, 19 ), Vector2( 4, 19 ), Vector2( 5, 19 ), Vector2( 6, 19 ), Vector2( 7, 19 ), Vector2( 1, 18 ), Vector2( 2, 18 ), Vector2( 3, 18 ), Vector2( 4, 18 ), Vector2( 5, 18 ), Vector2( 6, 18 ), Vector2( 1, 17 ), Vector2( 2, 17 ), Vector2( 5, 17 ), Vector2( 6, 17 ), Vector2( 1, 16 ), Vector2( 6, 16 ) ]
+initialBlocks = [  ]
